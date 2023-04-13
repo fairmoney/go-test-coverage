@@ -1,0 +1,64 @@
+name: test
+on: [push]
+permissions:
+  contents: write
+jobs:
+  test:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: '0%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 0%
+          message-color: '#cb2431'
+          file-name: coverage-0.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: '50%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 50%
+          message-color: '#e05d44'
+          file-name: coverage-50.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: '70%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 70%
+          message-color: '#fa7739'
+          file-name: coverage-70.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: '80%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 80%
+          message-color: '#dfb317'
+          file-name: coverage-80.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: '90%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 90%
+          message-color: '#97ca00'
+          file-name: coverage-90.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+      - name: '100%'
+        uses: action-badges/core@0.2.2
+        with:
+          label: coverage
+          message: 100%
+          message-color: '#44cc11'
+          file-name: coverage-100.svg
+          badge-branch: badges
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
